@@ -16,6 +16,7 @@ class Setup extends Controller{
     add_action('admin_menu', array($this, 'page_setup') );
     add_action('admin_enqueue_scripts', array($this, 'register_assets_admin') );
     add_action('init', array($this, 'register_posts'));
+    add_action('init', array($this, 'register_post_meta'));
     //$this->register_posts();
   }
 
