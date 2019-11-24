@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://runcinatur.github.io/img/runcinatur-logo.svg" height="150">
 </p>
-<h1 align="center">Runcinatur</h1>
+<h1 align="center">Banner Plugin - created with Runcinatur</h1>
 <p align="center">
   <a href="https://runcinatur.github.io">DOCS</a>
 </p>
@@ -11,14 +11,11 @@
   </a>
 </p>
 <p align="center">
-  Create WordPress plugins quickly and neatly and gain productivity.
+   Display banner containing images that vary depending on post or page tags. ACF Required.
 </p>
 
 # Requirements
-  - PHP >= 5.6
-
-# Installing
-` composer create-project jjs4ntos/runcinatur `
+  - PHP >= 7.1
 
 # What is Runcinatur?
 ----------------
