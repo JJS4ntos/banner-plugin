@@ -25,7 +25,7 @@ class Setup extends Controller{
    * @return
    */
   public function page_setup(){
-    add_menu_page( PLUGIN_NAME, PLUGIN_NAME, 'manage_options', sanitize_key(PLUGIN_NAME), array($this, 'admin_page'), $this->icon, 3 );
+    //add_menu_page( PLUGIN_NAME, PLUGIN_NAME, 'manage_options', sanitize_key(PLUGIN_NAME), array($this, 'admin_page'), $this->icon, 3 );
   }
 
   /**
@@ -112,7 +112,7 @@ class Setup extends Controller{
       'labels'             => $labels,
       'public'             => false,
       'publicly_queryable' => false,
-      'menu_icon'          => 'dashicons-groups',
+      'menu_icon'          => 'dashicons-format-gallery',
       'show_ui'            => true,
       'show_in_menu'       => true,
       'query_var'          => false,
@@ -122,8 +122,93 @@ class Setup extends Controller{
       'hierarchical'       => false,
       'menu_position'      => null,
       'supports'           => array('title'),
+      'taxonomies' => array('post_tag')
     );
     register_post_type('banner', $args);
+  }
+
+  public function register_post_meta() {
+    if( function_exists('acf_add_local_field_group') ):
+
+      acf_add_local_field_group(array(
+        'key' => 'group_5ddae35e8e8da',
+        'title' => 'Banner',
+        'fields' => array(
+          array(
+            'key' => 'field_5ddae367189bf',
+            'label' => 'Imagem',
+            'name' => 'imagem',
+            'type' => 'image',
+            'instructions' => '',
+            'required' => 1,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+              'width' => '',
+              'class' => '',
+              'id' => '',
+            ),
+            'return_format' => 'array',
+            'preview_size' => 'large',
+            'library' => 'all',
+            'min_width' => '',
+            'min_height' => '',
+            'min_size' => '',
+            'max_width' => '',
+            'max_height' => '',
+            'max_size' => '',
+            'mime_types' => '',
+          ),
+          array(
+            'key' => 'field_5ddae384189c0',
+            'label' => 'Direcionar para link',
+            'name' => 'link',
+            'type' => 'url',
+            'instructions' => 'Digite o link para onde o usuário será levado após clicar no banner',
+            'required' => 1,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+              'width' => '',
+              'class' => '',
+              'id' => '',
+            ),
+            'default_value' => '',
+            'placeholder' => 'Exemplo: https://google.com',
+          ),
+        ),
+        'location' => array(
+          array(
+            array(
+              'param' => 'post_type',
+              'operator' => '==',
+              'value' => 'banner',
+            ),
+          ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'seamless',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => array(
+          0 => 'permalink',
+          1 => 'the_content',
+          2 => 'excerpt',
+          3 => 'discussion',
+          4 => 'comments',
+          5 => 'revisions',
+          6 => 'slug',
+          7 => 'author',
+          8 => 'format',
+          9 => 'page_attributes',
+          10 => 'featured_image',
+          11 => 'categories',
+          12 => 'send-trackbacks',
+        ),
+        'active' => true,
+        'description' => '',
+      ));
+      
+      endif;
   }
 
 }

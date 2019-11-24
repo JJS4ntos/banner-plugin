@@ -1,11 +1,11 @@
 <?php
 /*
   Plugin Name: Banners
-  Plugin URI: https://github.com/JJS4ntos
+  Plugin URI: https://www.workana.com/freelancer/5f13fad6f9579f306054fd2d377c7207?ref=user_dropdown
   Description: Plugin para banners rotativos desenvolvido exclusivamente para Ricardo.
   Version: 1.0.0
   Author: Jair Júnior
-  Author URI: https://github.com/JJS4ntos
+  Author URI: https://www.workana.com/freelancer/5f13fad6f9579f306054fd2d377c7207?ref=user_dropdown
 */
 // If this file is accessed directory, then abort.
 if ( ! defined( 'WPINC' ) ) {

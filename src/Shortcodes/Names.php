@@ -8,7 +8,7 @@
      * @var array
      */
     public $names = [
-        //'shortcode' => 'Controller@method',
+        'banner-rotativo' => 'BannerController@index',
     ];
 
   }

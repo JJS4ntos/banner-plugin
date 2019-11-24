@@ -1,1 +1,28 @@
 /* Styles */
+.owl-prev {
+    width: 15px;
+    height: 100px;
+    position: absolute;
+    top: 30%;
+    margin-left: -10px;
+    display: block !important;
+    border:0px solid black;
+}
+
+.owl-next {
+    width: 15px;
+    height: 100px;
+    position: absolute;
+    top: 30%;
+    right: 2%;
+    display: block !important;
+    border:0px solid black;
+}
+.owl-prev i, .owl-next i {
+    font-size: 50px;
+    color: #ccc;
+}
+
+.owl-carousel .owl-nav button:hover {
+    background: transparent !important;
+}
